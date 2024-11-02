@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap");
 .section-1 {
   height: 100vh;
   position: relative;
@@ -7,7 +8,7 @@
   height: 100vh;
 }
 .section-3 {
-  height: 100vh;
+  height: 80vh;
 }
 .title {
   font-family: "Rubik Wet Paint", system-ui;
@@ -20,4 +21,170 @@
   background-color: black;
   color: white;
   padding: 10px;
+}
+.menu-desc {
+  max-width: 400px;
+  color: white;
+  background-color: black;
+  padding: 20px;
+  font-family: "Playwrite GB S", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  position: relative;
+  top: 60px;
+  left: 80px;
+  border-radius: 20px;
+}
+.menu-desc h1 {
+  font-family: "Rubik Wet Paint", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 20px;
+}
+.menu-desc p {
+  margin-bottom: 20px;
+}
+.btn {
+  background-color: #e21b39;
+  color: white;
+  padding: 10px;
+  border: none;
+  font-size: 15px;
+  font-family: "Playwrite GB S", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.ambience-desc {
+  max-width: 600px;
+  color: white;
+  background-color: black;
+  padding: 20px;
+  font-family: "Playwrite GB S", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  position: relative;
+  top: 100px;
+  right: -580px;
+  border-radius: 20px;
+}
+.branches {
+  min-height: 100vh;
+  margin-bottom: 20px;
+}
+.branches h1 {
+  text-align: center;
+  margin-top: 10px;
+  font-family: "Rubik Wet Paint", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.branch {
+  max-width: 400px;
+  padding: 20px;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.branches-main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.indicator {
+  color: #e21b39;
+  font-weight: bold;
+}
+.about {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.about h1 {
+  /* color: white; */
+  font-family: "Rubik Wet Paint", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.about-main {
+  background-color: white;
+  font-family: "Playwrite GB S", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  max-width: 80vw;
+  padding: 20px;
+  border-radius: 20px;
+}
+.about-main h3 {
+  color: #e21b39;
+}
+.contact {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact h1 {
+  font-family: "Rubik Wet Paint", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: white;
+}
+.contact-main {
+  max-width: 50vw;
+  background-color: white;
+  font-family: "Sedan SC", serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 20px;
+  font-weight: 600;
+  color: gray;
+}
+.contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.form-element {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form-element input,
+textarea {
+  outline: none;
+  padding: 10px 20px;
+}
+.form-element label {
+  color: #e21b39;
+}
+.contact-main button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #e21b39;
+  border: none;
+  color: white;
+  cursor: pointer;
 }

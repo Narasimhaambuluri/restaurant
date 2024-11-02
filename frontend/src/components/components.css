@@ -30,3 +30,43 @@
   text-decoration: none;
   color: white;
 }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.brand {
+  font-size: 25px;
+  font-weight: 900;
+}
+.footer {
+  background-color: black;
+  width: 100vw;
+  color: white;
+  padding: 40px;
+  font-family: "Sedan SC", serif;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-items a {
+  text-decoration: none;
+  color: white;
+}
+.footer-items {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-icons {
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+}
