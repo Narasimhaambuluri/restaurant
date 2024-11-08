@@ -2,7 +2,11 @@ const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const locationRouter = require("./routes/locationRoutes");
+const menuRouter = require("./routes/menuRoutes");
+const tableRouter = require("./routes/tableRoutes");
+const userRouter = require("./routes/authRoutes");
 const cors = require("cors");
+const cookieparser = require("cookie-parser");
 
 dotenv.config();
 
@@ -10,6 +14,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
+app.use(cookieparser());
 
 mongoose
   .connect(process.env.MONGO_URI)
@@ -21,7 +26,10 @@ mongoose
   });
 
 app.use("/location", locationRouter);
+app.use("/menu", menuRouter);
+app.use("/table", tableRouter);
+app.use("/user", userRouter);
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 4500, () => {
   console.log("Running successfully");
 });

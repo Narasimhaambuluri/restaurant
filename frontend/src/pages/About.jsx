@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Parallax } from "react-parallax";
 import aboutBack from "../images/about.jpg";
 import Navbar from "./../components/Navbar";
 import Footer from "./../components/Footer";
+import { useNavigate } from "react-router-dom";
 
 function About() {
+  const navigate = useNavigate();
+  useEffect(() => {
+    const token = localStorage.getItem("session_key");
+    if (!token) {
+      navigate("/login");
+    }
+  });
   return (
     <div className="about-wrapper">
       <Parallax

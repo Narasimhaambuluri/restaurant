@@ -25,4 +25,13 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/all", async (req, res) => {
+  try {
+    const locations = await Locations.find({}, { location_name: 1, _id: 0 });
+    res.status(200).json(locations);
+  } catch (error) {
+    console.log("error fetching all locations");
+  }
+});
+
 module.exports = router;

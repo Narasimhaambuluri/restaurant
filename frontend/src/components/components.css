@@ -24,11 +24,12 @@
 .nav-item:hover {
   cursor: pointer;
   border-bottom: 3px solid red;
-  transition: 0.2s;
+  transition: 0.5s;
 }
 .nav-item {
   text-decoration: none;
   color: white;
+  border-bottom: 3px solid black;
 }
 .logo {
   display: flex;
