@@ -6,6 +6,7 @@ import tableBack from "../images/book-table.jpg";
 import "./pages.css";
 import axios from "axios";
 import { FaSearch } from "react-icons/fa";
+import { toast, Bounce } from "react-toastify";
 import Footer from "./../components/Footer";
 
 function TableBook() {
@@ -57,18 +58,48 @@ function TableBook() {
     }
 
     if (!bookDate) {
-      alert("Please select a Date");
+      toast.warn(" Please select a Date", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Bounce,
+      });
       return;
     }
     const selectedDate = new Date(bookDate);
     const today = new Date();
     today.setHours(0, 0, 0, 0);
     if (selectedDate < today) {
-      alert("please select future dates or today");
+      toast.warn(" Please select future dates or today", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Bounce,
+      });
       return;
     }
     if (!locArray.includes(locName)) {
-      alert("There is no branch in this location");
+      toast.warn("There is no branch in this location", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Bounce,
+      });
       return;
     }
     const result = await axios.post("http://localhost:5000/table", {
@@ -104,7 +135,17 @@ function TableBook() {
   const bookTheTable = async (e) => {
     e.preventDefault();
     if (!bookTableType || !bookMembers || !bookSlot) {
-      alert("Please select all fields");
+      toast.warn(" Please select all fields", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Bounce,
+      });
       return;
     }
     const token = localStorage.getItem("session_key");
@@ -121,6 +162,17 @@ function TableBook() {
       bookDetails
     );
     window.location.reload();
+    toast.success("Table Booked Successfully", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      transition: Bounce,
+    });
   };
   return (
     <div className="bookTable-wrapper">

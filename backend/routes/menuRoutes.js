@@ -1,16 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
-
-const menuSchema = new mongoose.Schema({
-  name: String,
-  price: Number,
-  description: String,
-  type: String,
-  category: String,
-});
-
-const menu = mongoose.model("menu_items", menuSchema);
+const menu = require("../models/menu_items");
 
 router.get("/items", async (req, res) => {
   try {

@@ -84,8 +84,8 @@ function Menu() {
               <div>No Items in the menu</div>
             )}
           </div>
+          <Footer />
         </div>
-        <Footer />
       </Parallax>
     </div>
   );

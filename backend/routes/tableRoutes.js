@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const moment = require("moment");
 const jwt = require("jsonwebtoken");
+const tableOrders = require("../models/tableOrderModel");
 const router = express.Router();
 
 const tableSchema = new mongoose.Schema({
@@ -12,17 +13,6 @@ const tableSchema = new mongoose.Schema({
 });
 
 const tables = mongoose.model("tables", tableSchema);
-
-const tableOrderSchema = new mongoose.Schema({
-  email: String,
-  booked_date: String,
-  slot_booked: String,
-  location_name: String,
-  table_type: String,
-  members: Number,
-});
-
-const tableOrders = mongoose.model("table_orders", tableOrderSchema);
 
 router.post("/", async (req, res) => {
   try {

@@ -9,11 +9,26 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Profile from "./pages/Profile";
 import Login from "./pages/Login";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Register from "./pages/Register";
+import MyBookings from "./pages/MyBookings";
+import MyOrders from "./pages/MyOrders";
 
 function App() {
   return (
     <div className="App">
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -26,6 +41,8 @@ function App() {
           <Route path="/menu" element={<Menu />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/mybookings" element={<MyBookings />} />
+          <Route path="/myorders" element={<MyOrders />} />
         </Routes>
       </BrowserRouter>
     </div>
